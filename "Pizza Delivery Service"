@@ -1,0 +1,32 @@
+# Welcome message
+print("Thank you for choosing Town Pizza Deliveries!")
+
+# Ask for pizza size
+pizza_size = input("What size pizza would you like? (Small, Medium, or Large): ").lower()
+
+# Initialize the base price based on the chosen size
+if pizza_size == "small":
+    pizza_price = 15
+elif pizza_size == "medium":
+    pizza_price = 20
+elif pizza_size == "large":
+    pizza_price = 25
+else:
+    print("Invalid pizza size. Please choose Small, Medium, or Large.")
+    exit()
+
+# Ask if the customer wants to add pepperoni
+pepperoni = input("Do you want to add pepperoni? (yes/no): ").lower()
+if pepperoni == "yes":
+    if pizza_size == "small":
+        pizza_price += 2
+    else:
+        pizza_price += 3
+
+# Ask if the customer wants extra cheese
+extra_cheese = input("Do you want extra cheese? (yes/no): ").lower()
+if extra_cheese == "yes":
+    pizza_price += 1
+
+# Display the total bill
+print(f"Your total bill is ${pizza_price}. Enjoy your pizza!")
